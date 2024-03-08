@@ -1,3 +1,39 @@
+GOAT V3. ORIGINAL BY NTKHANG JUST RENAMED AND ADDED COMMAND
+
+I JUST COMBINED ALL THE COMMAND OF THE GOAT USER AND I JUST PUT MY COMMAND TOO THIS GOAT V3 HAS 300+ COMMANDS CREDITS TO ARE IN COMMAND THANKYOU YOU CAN SUPPORT ME BY DONATING IN MY REPLIT IT MADE ME HAPPY 
+
+ALSO USE C3C APPSTATE TO RUN THIS FILES OR TRY USE COOKIE BUT I PREPARED TO USE C3C
+
+ALSO SOME COMMANDS ARE NOT CURRENTLY WORKING CUZ OF NOT LATEST API THANKYOU
+
+HOPES IT HELP YA ALL 
+
+DONATION LINK: https://replit.com/@botrandom30/Donation-Area?v=1
+
+CONTACT ME HERE: https://www.facebook.com/loidofficiaI
+
+
+Fixed/New Working Command
+[Siri] inspired By Iphone that provides all your needs Api and Script By Jun
+[Adc] inspired by mirai that pastebin your command by commanding
+[Groupinfo] inspired by mirai that show the stats and many more about your group
+[Acp] acp or accept inspired by mirai that accept the bot friend request
+[Sicbo] a gambling game but for fun credit to the real owner
+[Botstats] commands there stats and many more by jun
+[Coinflip] command that for fun creadits to the img
+[Coupledp] gives you couple dp anime pic's
+[bard] google bard ask anything
+[quiz] fun game quiz by jun 
+
+That's all thankyou
+
+
+
+
+
+
+
+
 <img src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner">
 <h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> Goat Bot - Bot Chat Messenger</h1>
 

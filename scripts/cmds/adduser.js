@@ -5,7 +5,7 @@ module.exports = {
 	config: {
 		name: "adduser",
 		version: "1.4",
-		author: "NTKhang",
+		author: "NTKhang", 
 		countDown: 5,
 		role: 1,
 		shortDescription: {

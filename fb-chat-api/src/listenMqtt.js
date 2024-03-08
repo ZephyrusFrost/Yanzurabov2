@@ -104,15 +104,24 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
 	const mqttClient = ctx.mqttClient;
 
 	mqttClient.on('error', function (err) {
-		// log.error("listenMqtt", err);
+		log.error("listenMqtt", err);
 		mqttClient.end();
 		if (ctx.globalOptions.autoReconnect) {
 			listenMqtt(defaultFuncs, api, ctx, globalCallback);
 		} else {
-			globalCallback({
-				type: "stop_listen",
-				error: "Connection refused: Server unavailable"
-			}, null);
+			utils.checkLiveCookie(ctx, defaultFuncs)
+				.then(res => {
+					globalCallback({
+						type: "stop_listen",
+						error: "Connection refused: Server unavailable"
+					}, null);
+				})
+				.catch(err => {
+					globalCallback({
+						type: "account_inactive",
+						error: "Maybe your account is blocked by facebook, please login and check at https://facebook.com"
+					}, null);
+				});
 		}
 	});
 
@@ -363,7 +372,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
 								.otherUserFbId).toString(),
 						messageID: delta.deltaMessageReply.message.messageMetadata.messageId,
 						senderID: delta.deltaMessageReply.message.messageMetadata.actorFbId.toString(),
-						attachments: delta.deltaMessageReply.message.attachments.map(function (att) {
+						attachments: (delta.deltaMessageReply.message.attachments || []).map(function (att) {
 							const mercury = JSON.parse(att.mercuryJSON);
 							Object.assign(att, mercury);
 							return att;
@@ -382,7 +391,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
 						isGroup: !!delta.deltaMessageReply.message.messageMetadata.threadKey.threadFbId,
 						mentions: mentions,
 						timestamp: delta.deltaMessageReply.message.messageMetadata.timestamp,
-						participantIDs: (delta.deltaMessageReply.message.messageMetadata.cid.canonicalParticipantFbids || []).map(e => e.toString())
+						participantIDs: (delta.deltaMessageReply.message.messageMetadata.cid.canonicalParticipantFbids || delta.deltaMessageReply.message.participants || []).map(e => e.toString())
 					};
 
 					if (delta.deltaMessageReply.repliedToMessage) {
@@ -543,6 +552,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
 				case "change_thread_theme":
 				case "change_thread_nickname":
 				case "change_thread_icon":
+				case "change_thread_quick_reaction":
 				case "change_thread_admins":
 				case "group_poll":
 				case "joinable_group_link_mode_change":

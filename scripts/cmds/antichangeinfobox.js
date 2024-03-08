@@ -1,9 +1,9 @@
-const { getStreamFromURL } = global.utils;
+const { getStreamFromURL, uploadImgbb } = global.utils;
 
 module.exports = {
 	config: {
 		name: "antichangeinfobox",
-		version: "1.5",
+		version: "1.8",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
@@ -44,6 +44,7 @@ module.exports = {
 			antiChangeEmojiOn: "Đã bật chức năng chống đổi emoji box chat",
 			antiChangeEmojiOff: "Đã tắt chức năng chống đổi emoji box chat",
 			antiChangeAvatarAlreadyOn: "Hiện tại box chat của bạn đang bật chức năng cấm thành viên đổi avatar",
+			antiChangeAvatarAlreadyOnButMissingAvt: "Hiện tại box chat của bạn đang bật chức năng cấm thành viên đổi avatar box chat chưa được đặt avatar",
 			antiChangeNameAlreadyOn: "Hiện tại box chat của bạn đang bật chức năng cấm thành viên đổi tên",
 			antiChangeNicknameAlreadyOn: "Hiện tại box chat của bạn đang bật chức năng cấm thành viên đổi nickname",
 			antiChangeThemeAlreadyOn: "Hiện tại box chat của bạn đang bật chức năng cấm thành viên đổi theme (chủ đề)",
@@ -62,6 +63,7 @@ module.exports = {
 			antiChangeEmojiOn: "Turn on anti change emoji box chat",
 			antiChangeEmojiOff: "Turn off anti change emoji box chat",
 			antiChangeAvatarAlreadyOn: "Your box chat is currently on anti change avatar",
+			antiChangeAvatarAlreadyOnButMissingAvt: "Your box chat is currently on anti change avatar but your box chat has not set avatar",
 			antiChangeNameAlreadyOn: "Your box chat is currently on anti change name",
 			antiChangeNicknameAlreadyOn: "Your box chat is currently on anti change nickname",
 			antiChangeThemeAlreadyOn: "Your box chat is currently on anti change theme",
@@ -86,11 +88,13 @@ module.exports = {
 		}
 		switch (args[0]) {
 			case "avt":
-			case "avatar": {
+			case "avatar":
+			case "image": {
 				const { imageSrc } = await threadsData.get(threadID);
 				if (!imageSrc)
 					return message.reply(getLang("missingAvt"));
-				await checkAndSaveData("avatar", imageSrc);
+				const newImageSrc = await uploadImgbb(imageSrc);
+				await checkAndSaveData("avatar", newImageSrc.image.url);
 				break;
 			}
 			case "name": {
@@ -124,16 +128,27 @@ module.exports = {
 		switch (logMessageType) {
 			case "log:thread-image": {
 				const dataAntiChange = await threadsData.get(threadID, "data.antiChangeInfoBox", {});
-				if (!dataAntiChange.avatar)
+				if (!dataAntiChange.avatar && role < 1)
 					return;
 				return async function () {
+					// check if user not is admin or bot then change avatar back
 					if (role < 1 && api.getCurrentUserID() !== author) {
-						message.reply(getLang("antiChangeAvatarAlreadyOn"));
-						api.changeGroupImage(await getStreamFromURL(dataAntiChange.avatar), threadID);
+						if (dataAntiChange.avatar != "REMOVE") {
+							message.reply(getLang("antiChangeAvatarAlreadyOn"));
+							api.changeGroupImage(await getStreamFromURL(dataAntiChange.avatar), threadID);
+						}
+						else {
+							message.reply(getLang("antiChangeAvatarAlreadyOnButMissingAvt"));
+						}
 					}
+					// else save new avatar
 					else {
 						const imageSrc = logMessageData.url;
-						await threadsData.set(threadID, imageSrc, "data.antiChangeInfoBox.avatar");
+						if (!imageSrc)
+							return await threadsData.set(threadID, "REMOVE", "data.antiChangeInfoBox.avatar");
+
+						const newImageSrc = await uploadImgbb(imageSrc);
+						await threadsData.set(threadID, newImageSrc.image.url, "data.antiChangeInfoBox.avatar");
 					}
 				};
 			}
