@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "",
-    "password": "",
+    "email": "Niknobmakshub@gmail.com",
+    "password": "nyalamakshub45",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -48,7 +48,7 @@
     }
   },
   "dashBoard": {
-    "enable": true,
+    "enable": false,
     "expireVerifyCode": 300000,
     "port": 3001
   },
