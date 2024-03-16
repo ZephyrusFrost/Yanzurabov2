@@ -28,7 +28,7 @@
     {
         "domain": ".facebook.com",
         "expirationDate": 1717937467.474463,
-        "hostOnly": true,
+        "hostOnly": false,
         "httpOnly": true,
         "name": "fr",
         "path": "/",
