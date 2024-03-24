@@ -1,0 +1,10 @@
+# Exported from Render on 2024-03-24T05:35:04Z
+services:
+- type: web
+  name: Yanzurabov2-7528899
+  runtime: static
+  repo: https://github.com/ZephyrusFrost/Yanzurabov2
+  branch: main
+  buildCommand: npm install && node index.js
+  staticPublishPath: npm start
+version: "1"
