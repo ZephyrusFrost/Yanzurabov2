@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "",
-    "password": "",
+    "email": "churchillabing990@gmail.com",
+    "password": "bahoako12345",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -24,8 +24,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "⪼ %2 ⪻   𝗬𝗔𝗡𝗭𝗨𝗩𝟮  | ᴷʸˡᵉ'ˢ ᴮᵒᵗ",
-  "prefix": "×",
+  "nickNameBot": " C̸H̸U̸R̸C̸J̸I̸L̸L̸ NB̸O̸T̸",
+  "prefix": "!*,
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -36,7 +36,7 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "NiknobMakshub@gmail.com",
+      "email": "churchill",
       "clientId": "930308033521-sv8r360ibt5dgr5n1l5oogb7kom9vreq.apps.googleusercontent.com",
       "clientSecret": "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",
       "refreshToken": "1//04sAoEJE3Iq3tCgYIARAAGAQSNwF-L9IrX7QyowrYemGsBJkK8Z_atg8ih6LtaFS-4ttMQ4a697c4XWZvaAOulWyTCNQDPrpvdcg",
