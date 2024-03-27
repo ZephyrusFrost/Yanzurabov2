@@ -25,8 +25,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "⪼ %2 ⪻   𝗬𝗔𝗡𝗭𝗨𝗩𝟮  | ᴷʸˡᵉ'ˢ ᴮᵒᵗ",
-  "prefix": "×",
+  "nickNameBot": "⪼ %2 ⪻  𝗞𝗬𝗥𝗜𝗘𝗟 𝗕𝗢𝗧 | ᴷʸˡᵉ'ˢ ᴮᵒᵗ",
+  "prefix": "@",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
