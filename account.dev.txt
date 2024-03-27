@@ -180,4 +180,16 @@
         "storeId": null,
         "value": "v2%3Bclient_version%3A2449%3Btimestamp%3A1711502406"
     },
- 
+    {
+        "domain": ".facebook.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "x-referer",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "eyJyIjoiL2NoZWNrcG9pbnQvMTUwMTA5MjgyMzUyNTI4Mi9sb2dvdXQvP25leHQ9aHR0cHMlM0ElMkYlMkZtLmZhY2Vib29rLmNvbSUyRmNoZWNrcG9pbnQlMkY4MjgyODEwMzA5Mjc5NTYlMkYlM0ZuZXh0JTNEaHR0cHMlMjUzQSUyNTJGJTI1MkZtLmZhY2Vib29rLmNvbSUyNTJGJTI2d3RzaWQlM0RyZHJfMEVHbjdXNzBMamNiN2lPb0QlMjZyZWZzcmMlM0RkZXByZWNhdGVkJnBhaXB2PTAmZWF2PUFmYVpBazBDWXlEQ2l3am9CT3c2RkN2QTBWVV9Pdmd3M19OYUxJX1RuMVpoQmVqN0FGU1otRW9oLVFUWU5UekFaLWMiLCJoIjoiL2NoZWNrcG9pbnQvMTUwMTA5MjgyMzUyNTI4Mi9sb2dvdXQvP25leHQ9aHR0cHMlM0ElMkYlMkZtLmZhY2Vib29rLmNvbSUyRmNoZWNrcG9pbnQlMkY4MjgyODEwMzA5Mjc5NTYlMkYlM0ZuZXh0JTNEaHR0cHMlMjUzQSUyNTJGJTI1MkZtLmZhY2Vib29rLmNvbSUyNTJGJTI2d3RzaWQlM0RyZHJfMEVHbjdXNzBMamNiN2lPb0QlMjZyZWZzcmMlM0RkZXByZWNhdGVkJnBhaXB2PTAmZWF2PUFmYVpBazBDWXlEQ2l3am9CT3c2RkN2QTBWVV9Pdmd3M19OYUxJX1RuMVpoQmVqN0FGU1otRW9oLVFUWU5UekFaLWMiLCJzIjoibSJ9"
+    }
+]
