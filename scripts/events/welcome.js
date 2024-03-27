@@ -26,7 +26,7 @@ module.exports = {
 			session2: "𝗻𝗼𝗼𝗻",
 			session3: "𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻",
 			session4: "𝗲𝘃𝗲𝗻𝗶𝗻𝗴",
-			welcomeMessage: "🟢 𝗬𝗔𝗡𝗭𝗨 𝗕𝗢𝗧  are connected successfully!\n\n━━━━━━━━━━━━━━\n🎉greetings: Thank you for inviting me to the group😊\n\n𝗕𝗢𝗧 𝗽𝗿𝗲𝗳𝗶𝘅: %1\nTo view the list of commands, please enter: %1help\n𝗔𝗗𝗠𝗜𝗡:https://www.facebook.com/profile.php?id=100052395031835\n━━━━━━━━━━━━━━\nThanks for using my Bot",
+			welcomeMessage: "🟢 𝗞𝗬𝗥𝗜𝗘𝗟 𝗕𝗢𝗧  are connected successfully!\n\n━━━━━━━━━━━━━━\n🎉greetings: Thank you for inviting me to the group😊\n\n𝗕𝗢𝗧 𝗽𝗿𝗲𝗳𝗶𝘅: %1\nTo view the list of commands, please enter: %1help\n𝗔𝗗𝗠𝗜𝗡:https://www.facebook.com/profile.php?id=100052395031835\n━━━━━━━━━━━━━━\nThanks for using my Bot",
 			multiple1: "𝘆𝗼𝘂",
 			multiple2: "𝘆𝗼𝘂 𝗴𝘂𝘆𝘀",
 			defaultWelcomeMessage: `𝗛𝗲𝗹𝗹𝗼  𝗻𝗶𝗴𝗴𝗮 @{userName}.\n\n𝘄𝗲𝗹𝗰𝗼𝗺𝗲 {multiple} 𝘁𝗼 𝘁𝗵𝗲 𝗰𝗵𝗮𝘁 𝗴𝗿𝗼𝘂𝗽🎉\n𝗚𝗿𝗼𝘂𝗽 𝗻𝗮𝗺𝗲:『{boxName}』\n𝗛𝗮𝘃𝗲 𝗮 𝗻𝗶𝗰𝗲 {session} 🤖\n𝗡𝗢𝗧𝗜𝗖𝗘❗❗\n⚠️ 𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀
