@@ -1,12 +1,12 @@
 {
   "facebookAccount": {
     "email": "",
-    "password": "",
+    "password": "",Z21
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
-    "intervalGetNewCookie": 6943200,
+    "intervalGetNewCookie": 4320,
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
   },
   "antiInbox": false,
@@ -25,7 +25,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "⪼ %2 ⪻  𝗞𝗬𝗥𝗜𝗘𝗟 𝗕𝗢𝗧 | ᴷʸˡᵉ'ˢ ᴮᵒᵗ",
+  "nickNameBot": "⪼ %2 ⪻  𝗭𝗘𝗣𝗛 𝗕𝗢𝗧𝗩𝟮 | ᴷʸˡᵉ'ˢ ᴮᵒᵗ",
   "prefix": "@",
   "database": {
     "type": "sqlite",
